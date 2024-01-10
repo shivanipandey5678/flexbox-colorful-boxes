@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started With React I
+    </title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel"> 
+      
+      const ele=document.getElementById("root");
+      const rootele=ReactDOM.createRoot(ele);
+      let sty={
+        border:'1px solid black',
+        width:'70%',
+        margin:'auto ',
+        height:'100px',
+       marginTop:'300px',
+       backgroundColor:'pink',
+       display:'flex',
+       justifyContent: 'center', 
+        alignItems: 'center',
+
+       
+      }
+      let childsty1={
+        width:'50px',
+        height:'50px',
+        border:'1px solid black',
+        marginLeft:'10px',
+        backgroundColor:'red',
+      }
+      let childsty2={
+        width:'50px',
+        height:'50px',
+        border:'1px solid black',
+        marginLeft:'10px',
+        backgroundColor:'purple',
+      }
+      let childsty3={
+        width:'50px',
+        height:'50px',
+        border:'1px solid black',
+        marginLeft:'10px',
+        backgroundColor:'blue',
+      }
+      let childsty4={
+        width:'50px',
+        height:'50px',
+        border:'1px solid black',
+        marginLeft:'10px',
+        backgroundColor:'green',
+      }
+      
+      
+      const e = React.createElement("div",{id:"parent",style:sty},[
+      "Parent",
+        React.createElement("div",{style:childsty1},1),
+        React.createElement("div",{style:childsty2},2),
+        React.createElement("div",{style:childsty3},3),
+        React.createElement("div",{style:childsty4},4)
+      ])
+      rootele.render(e)
+
+    </script>
+</body>
+
+</html>
